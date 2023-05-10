@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+background: #bb9230;
+color: #fff;
+}
+  
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #bc9331;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar {
+    background: #f1f1f1;
+    width: 5px;
+}
+
+.borderEsquinas {
+    position: relative;
+    z-index: 10;
+    transition: 1s;
+}
+
+.borderEsquinas::before {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-top: 1px solid #fff0;
+    border-left: 1px solid #fff0;
+    position: absolute;
+    transition: 0.2s;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.borderEsquinas::after {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-right: 1px solid #fff0;
+    border-bottom: 1px solid #fff0;
+    position: absolute;
+    transition: 0.2s;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+.borderEsquinas:hover::before {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.borderEsquinas:hover::after {
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.flecha {
+    background-color: #00000057;
+    transition: 0.5s;
+}
+.flecha:hover {
+    background-color: #ffffff57;
+}
+
+.svgfondo {
+    background-color: #f8f8f897;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.letas {
+    color: #1d1c1c;
+    transition: 0.5s color;
+}
+
+.letas:hover {
+    color: #bb9230;
+}
+
+.submit {
+    color: #fff;
+    background-color: #000;
+    transition: 0.3s background-color;
+}
+.submit:hover {
+    color: #fff;
+    background-color: #bc9331;
+}
+
+.inputt {
+    border: 1px solid #654f1b52;
+    transition: 0.4s border;
+}
+
+.inputt:focus {
+    border: 1px solid #513e14;
+}
+
+.estiloCapital::first-letter{
+	font-size:60px;
+	font-family:serif;
+	margin:0 20px;
+	float:left;
+}
